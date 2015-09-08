@@ -1,4 +1,5 @@
 .hr-divider {
     width: 50%;
-    border-color: #2c3e50
+    border-color: #2c3e50;
+    border-width: 3px;
 }
