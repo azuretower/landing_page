@@ -9,10 +9,6 @@ def update():
     out, err = p.communicate() 
     return out, err
 
-
-
-
-
     # response = os.system('git pull')
     # print 'hi'
     # return response
