@@ -13,8 +13,7 @@ def pull():
     return out, err
 
 def collect():
-    p = subprocess.Popen(['workon', 'landing_page'],
-                        stdout=subprocess.PIPE)
+    p = subprocess.Popen(['workon', 'landing_page'])
     collect = subprocess.Popen(['./manage.py', 'collectstatic'],
                         cwd='/sites/projects/landing_page/',
                         stdout=subprocess.PIPE, 
