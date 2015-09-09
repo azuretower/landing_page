@@ -20,5 +20,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'main.views.home', name='home'),
     url(r'^hook/$', include('github_hook.urls')),
-    url(r'^hooks/$', 'main.views.update'),
+    url(r'^hooks/$', 'main.views.update_view'),
 ]
