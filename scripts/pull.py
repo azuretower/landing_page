@@ -1,7 +1,17 @@
 #!/usr/bin/env python
-import os 
+import os
+import subprocess
 
 
 def update():
-    os.system('cd /sites/projects/landing_page/')
-    os.system('git pull')
+    p = subprocess.Popen(['git', 'pull'], stdout=subprocess.PIPE, 
+                                        stderr=subprocess.PIPE)
+    out, err = p.communicate()
+    return out
+
+
+
+
+    # response = os.system('git pull')
+    # print 'hi'
+    # return response
