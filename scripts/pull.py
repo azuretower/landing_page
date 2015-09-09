@@ -7,7 +7,8 @@ def update():
     p = subprocess.Popen(['git', 'pull'], stdout=subprocess.PIPE, 
                                         stderr=subprocess.PIPE)
     out, err = p.communicate()
-    return out
+    return out, err
+
 
 
 

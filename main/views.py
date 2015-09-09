@@ -9,6 +9,7 @@ def home(request):
 
 def update(request):
     context = {}
-    response = pull.update()
+    response, error = pull.update()
     context['response'] = response
+    context['error'] = error
     return render(request, 'response.html', context)
