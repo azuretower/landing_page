@@ -18,5 +18,5 @@ def collect():
                         stdout=subprocess.PIPE, 
                         stderr=subprocess.PIPE)
 
-    out, err = collect.commuincate()
+    out, err = collect.communicate()
     return out, err
