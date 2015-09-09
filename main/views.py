@@ -8,5 +8,7 @@ def home(request):
     return render(request, 'index.html', context)
 
 def update(request):
-    pull.update()
-    return HttpResponse(status=200)
+    context = {}
+    response = pull.update()
+    context['response'] = response
+    return render(request, 'response.html', context)
