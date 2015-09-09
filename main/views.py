@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from scripts import update
 
 def home(request):
@@ -7,6 +8,7 @@ def home(request):
 
     return render(request, 'index.html', context)
 
+@csrf_exempt
 def update_view(request):
     context = {}
     pull_response, pull_error = update.pull()
