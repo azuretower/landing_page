@@ -20,3 +20,11 @@ def collect():
 
     out, err = collect.communicate()
     return out, err
+
+def restart():
+    restart = subprocess.Popen(['service', 'apache2', 'restart'],
+                        stdout=subprocess.PIPE, 
+                        stderr=subprocess.PIPE)
+
+    out, err = restart.communicate()
+    return out, err
