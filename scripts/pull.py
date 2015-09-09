@@ -1,6 +1,5 @@
 #!/usr/bin/env python
+import os 
 
 def update():
-    print "yata!"
-    # file1=open('testfile', 'w+')
-    # file1.write('This is a test')
+    os.system('git pull')
