@@ -10,7 +10,7 @@ def home(request):
 
 @csrf_exempt
 def update_view(request):
-    if request.method == 'POST'
+    if request.method == 'POST':
         context = {}
         pull_response, pull_error = update.pull()
         collect_response, collect_error = update.collect()
