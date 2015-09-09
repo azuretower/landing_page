@@ -10,6 +10,8 @@ def home(request):
 
 @csrf_exempt
 def update_view(request):
+    # checkout this site to figureout better security
+    # http://eli.thegreenplace.net/2014/07/09/payload-server-in-python-3-for-github-webhooks
     if request.method == 'POST' or 'GET':
         context = {}
         pull_response, pull_error = update.pull()
