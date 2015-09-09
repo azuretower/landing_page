@@ -2,7 +2,6 @@
 import os
 import subprocess
 
-
 def pull():
     pull = subprocess.Popen(['git', 'pull'],
                         cwd='/sites/projects/landing_page/',
