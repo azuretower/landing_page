@@ -4,9 +4,9 @@ import subprocess
 
 
 def update():
-    p = subprocess.Popen(['git', 'pull'], stdout=subprocess.PIPE, 
+    p = subprocess.Popen(['git', 'pull'], cwd='/sites/projects/landing_page/' stdout=subprocess.PIPE, 
                                         stderr=subprocess.PIPE)
-    out, err = p.communicate()
+    out, err = p.communicate() 
     return out, err
 
 
