@@ -13,7 +13,7 @@ def pull():
     return out, err
 
 def collect():
-    collect = subprocess.Popen(['/sites/virtualenvs/landing_page/bin/python/manage.py', 'collectstatic'],
+    collect = subprocess.Popen(['/sites/virtualenvs/landing_page/bin/python', './manage.py', 'collectstatic'],
                         cwd='/sites/projects/landing_page/',
                         stdout=subprocess.PIPE, 
                         stderr=subprocess.PIPE)
