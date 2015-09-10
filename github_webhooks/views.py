@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from scripts import update
 
-@csrf_exempt
+
 def update_view(request):
     # checkout this site to figure out better security
     # http://eli.thegreenplace.net/2014/07/09/payload-server-in-python-3-for-github-webhooks
