@@ -18,4 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^$', 'main.views.home', name='home'),
+    url(r'^send_message/$', 'main.views.message', name='send_message')
 ]
