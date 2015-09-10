@@ -3,9 +3,7 @@ import os
 import subprocess
 
 def chown():
-    chown -R www-data:www-data landing_page/
-
-    chown = subprocess.Popen(['chown', '-R', 'www\-data:www\-data', 'landing_page/'],
+    chown = subprocess.Popen(['chown', '-R', 'www-data:www-data', 'landing_page/'],
                         cwd='/sites/projects/',
                         stdout=subprocess.PIPE, 
                         stderr=subprocess.PIPE)
