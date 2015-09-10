@@ -11,3 +11,16 @@
 .main-title {
     font-size: 70px;
 }
+
+#portfolio h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#portfolio img {
+    border: 4px solid #2c3e50;
+}
+
+.modal-body img {
+    border: 4px solid #2c3e50;
+}
