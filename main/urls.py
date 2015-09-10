@@ -17,7 +17,5 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('main.urls')),
-    url(r'^', include('github_webhooks.urls')),
+    url(r'^$', 'main.views.home', name='home'),
 ]
