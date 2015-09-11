@@ -12,7 +12,7 @@ def update_view(request):
 
         pull_response, pull_error = update.pull()
 
-        if 'error: insufficient permission' in pull_error:
+        if pull_error:
             chown_response, chown_error = update.chown()
             context['chown'] = chown_response
             context['chown_error'] = chown_error

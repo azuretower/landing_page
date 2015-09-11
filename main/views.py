@@ -21,10 +21,6 @@ def message(request):
         email = request.POST.get('email')
         message = 'Message from ' + name + ' - ' + email + '\n\n'
         message += request.POST.get('message')
-        print subject
-        print name
-        print email
-        print message
 
         send_mail(subject, message, from_address, [to_address], fail_silently=False)
         return HttpResponse(status=200)
