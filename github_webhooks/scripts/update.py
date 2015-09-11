@@ -8,7 +8,7 @@ def chown():
                         stdout=subprocess.PIPE, 
                         stderr=subprocess.PIPE)
 
-    out, err = chwon.communicate()
+    out, err = chown.communicate()
     return out, err
 
 def pull():
