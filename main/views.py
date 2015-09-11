@@ -6,21 +6,6 @@ from django.http import HttpResponse
 def home(request):
     context = {}
 
-    from_address = 'azuretower7@gmail.com'
-    to_address = 'ryan.merrill215@gmail.com'
-
-    if request.method == 'POST':
-
-        subject = request.POST.get('subject')
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = 'Message from ' + str(name) + ' - ' + str(email) + '\n\n'
-        message += str(request.POST.get('message'))
-
-        print 'sending mail'
-        send_mail(subject, message, from_address, [to_address], fail_silently=False)
-        print 'sent mail'
-
     return render(request, 'index.html', context)
 
 def message(request):
