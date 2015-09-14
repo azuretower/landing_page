@@ -37,6 +37,10 @@ button#contact_btn {
     background-color: #0C888B;
 }
 
+#portfolio .portfolio-item .portfolio-link {
+    max-width: 500px;
+}
+
 @media(max-width:768px) {
     header .intro-text .main-title {
         font-size: 50px;
