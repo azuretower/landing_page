@@ -73,3 +73,5 @@ local_settings.py
 *.orig
 
 .DS_Store
+
+/static/
