@@ -15,6 +15,10 @@ DATABASES = {
     }
 }
 
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
 # email settings if you are using gmail
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
