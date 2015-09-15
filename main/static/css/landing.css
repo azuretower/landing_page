@@ -49,6 +49,12 @@ button#contact_btn {
     color: #0C888B;
 }
 
+.live-links {
+    font-size: 18px;
+    text-align: center;
+    /*padding-left: 115px;*/
+}
+
 /*.intro-text {
     animation-name: intro;
     animation-duration: .3s;
