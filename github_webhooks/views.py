@@ -10,9 +10,9 @@ def update_view(request):
     if request.method == 'POST' or 'GET':
         context = {}
 
-        # branch = request.POST.get('payload')
+        branch = request.POST.get('payload')
 
-        # context['branch'] = branch
+        context['branch'] = branch
 
         if True:
 
