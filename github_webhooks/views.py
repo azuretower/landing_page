@@ -10,24 +10,33 @@ def update_view(request):
     if request.method == 'POST' or 'GET':
         context = {}
 
-        pull_response, pull_error = update.pull()
+        # branch = request.POST.get('payload')
 
-        if pull_error:
-            chown_response, chown_error = update.chown()
-            context['chown'] = chown_response
-            context['chown_error'] = chown_error
+        # context['branch'] = branch
+
+        if True:
 
             pull_response, pull_error = update.pull()
 
-        context['pull'] = pull_response
-        context['pull_error'] = pull_error
+            if pull_error:
+                chown_response, chown_error = update.chown()
+                context['chown'] = chown_response
+                context['chown_error'] = chown_error
 
-        collect_response, collect_error = update.collect()
-        context['collect'] = collect_response
-        context['collect_error'] = collect_error
+                pull_response, pull_error = update.pull()
 
-        restart_response, restart_error = update.restart()
-        context['restart'] = restart_response
-        context['restart_error'] = restart_error
+            context['pull'] = pull_response
+            context['pull_error'] = pull_error
+
+            collect_response, collect_error = update.collect()
+            context['collect'] = collect_response
+            context['collect_error'] = collect_error
+
+            try:
+                restart_response, restart_error = update.restart()
+                context['restart'] = restart_response
+                context['restart_error'] = restart_error
+            except:
+                pass
 
         return render(request, 'response.html', context)
