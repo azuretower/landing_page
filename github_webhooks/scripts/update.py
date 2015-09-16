@@ -28,8 +28,8 @@ def pull():
 
 def collect():
 
-    out = None
-    err = None
+    out = StringIO()
+    err = StringIO()
     call_command('collectstatic', interactive=False, stdout=out, stderr=err)
 
     # collect = subprocess.Popen([env_home + '/' + project_name + '/bin/python', './manage.py', 'collectstatic', '--noinput'],
