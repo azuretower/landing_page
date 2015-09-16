@@ -12,7 +12,8 @@ def update_view(request):
 
         branch = request.POST.get('ref')
 
-        context['branch'] = branch
+
+        context['branch'] = request.POST
 
         if True:
 
