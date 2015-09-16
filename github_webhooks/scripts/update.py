@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import subprocess
+import StringIO
 from django.conf import settings
 from django.core.management import call_command
 
