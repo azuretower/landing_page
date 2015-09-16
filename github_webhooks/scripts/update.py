@@ -32,13 +32,13 @@ def collect():
     err = StringIO()
     call_command('collectstatic', interactive=False, stdout=out, stderr=err)
 
+    return out.getvalue(), err.getvalue()
     # collect = subprocess.Popen([env_home + '/' + project_name + '/bin/python', './manage.py', 'collectstatic', '--noinput'],
     #                     cwd=project_home + '/' + project_name + '/',
     #                     stdout=subprocess.PIPE, 
     #                     stderr=subprocess.PIPE)
 
     # out, err = collect.communicate()
-    return out, err
 
 def restart():
     restart = subprocess.Popen(['service', 'apache2', 'restart'],
