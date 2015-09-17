@@ -22,6 +22,10 @@ def pull():
     code_dir = '/sites/projects/landing_page'
     with cd(code_dir):
         sudo('git pull', user='www-data')
+
+    code_dir = '/sites/projects/landing_page/github_webhooks'
+    with cd(code_dir):
+        sudo('git pull', user='www-data')
     
 def deploy():
     pull()
