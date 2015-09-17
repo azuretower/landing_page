@@ -13,7 +13,7 @@ def update_view(request):
 
         branch = request.POST.get('ref')
         payload = request.body
-        json_data = json.load(payload)
+        json_data = json.loads(payload)
 
         context['branch'] = json_data['ref']
 
