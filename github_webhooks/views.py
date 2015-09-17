@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from scripts import update
+from django.utils import simplejson
 
 @csrf_exempt
 def update_view(request):
@@ -12,8 +13,9 @@ def update_view(request):
 
         branch = request.POST.get('ref')
         payload = request.body
+        json_data = simplejson.loads(payload)
 
-        context['branch'] = payload
+        context['branch'] = json_data['ref']
 
         if True:
 
