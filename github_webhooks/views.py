@@ -18,14 +18,6 @@ def update_view(request):
         if True:
 
             pull_response, pull_error = update.pull()
-
-            if pull_error:
-                # chown_response, chown_error = update.chown()
-                context['chown'] = chown_response
-                context['chown_error'] = chown_error
-
-                pull_response, pull_error = update.pull()
-
             context['pull'] = pull_response
             context['pull_error'] = pull_error
 
