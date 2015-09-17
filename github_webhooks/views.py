@@ -17,7 +17,7 @@ def update_view(request):
 
         context['branch'] = json_data['ref']
 
-        if True:
+        if 'master' in json_data['ref']:
 
             pull_response, pull_error = update.pull()
             context['pull'] = pull_response
