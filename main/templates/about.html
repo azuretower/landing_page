@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<section class="success" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>About</h2>
+                <hr class="hr-divider">
+            </div>
+        </div>
+        <div class="row about-section">
+            <div class="col-lg-4 col-lg-offset-2">
+                <p>I'm a Django/Python Web Developer.  I first learned programming at BYU as a CS major</p>
+            </div>
+            <div class="col-lg-4">
+                <p>I learned web development from the <a href="http://codingcamp.us/courses/list/?course=3" target='blank'>Coding Campus</a> boot camp.</p>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <a href="{% static 'img/Resume.pdf' %}" class="btn btn-lg btn-outline" target='blank'>
+                     Checkout My Resume
+                </a>
+                {# &eacute; #}
+            </div>
+        </div>
+    </div>
+</section>

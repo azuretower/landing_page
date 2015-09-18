@@ -1,3 +1,21 @@
+body {
+    /*margin-bottom: 60px;*/
+}
+
+footer {
+    /* settings for the position of the footer */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 86px;
+}
+
+html { /* sticks the footer to the bottom */
+  position: relative;
+  min-height: 100%;
+}
+
 .hr-divider {
     width: 50%;
     border-color: #2c3e50;
