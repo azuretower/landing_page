@@ -26,6 +26,10 @@ html { /* sticks the footer to the bottom */
     text-align: center;
 }
 
+.about-sidebar {
+    
+}
+
 header .intro-text .main-title {
     font-size: 70px;
 }
