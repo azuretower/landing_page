@@ -1,5 +1,23 @@
 body {
-    /*margin-bottom: 60px;*/
+    /*margin-top: 80px;*/
+    /*margin-bottom: 120px;*/
+}
+
+.top-space {
+    margin-top: 80px;
+}
+
+.bottom-space {
+    margin-bottom: 120px;
+}
+
+.logged-in {
+    z-index: 1049;
+    position: fixed;
+    top: 63px;
+    left: 3px;
+    /*width: 50px;*/
+    /*height: 50px;*/
 }
 
 footer {
@@ -34,7 +52,12 @@ header .intro-text .main-title {
     font-size: 70px;
 }
 
-#portfolio h1,h2,h3,h4,h5,h6 {
+#portfolio h1,
+#portfolio h2,
+#portfolio h3,
+#portfolio h4,
+#portfolio h5,
+#portfolio h6 {
     text-align: center;
     padding-bottom: 10px;
 }
@@ -57,7 +80,13 @@ section.success .btn {
 
 button#contact_btn {
     background-color: #0C888B;
-    border-color: #11866f;
+    border-color: white;
+    font-size: 25px;
+    border-width: 2px;
+}
+
+button#contact_btn:focus {
+    outline: none;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -75,6 +104,10 @@ button#contact_btn {
     font-size: 18px;
     text-align: center;
     /*padding-left: 115px;*/
+}
+
+.blog-link {
+    float: right;
 }
 
 /*.intro-text {

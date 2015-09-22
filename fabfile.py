@@ -30,7 +30,7 @@ def pull():
 def deploy():
     pull()
     collect_static()
-    run('service apache2 restart')
+    sudo('service apache2 restart')
 
 @_contextmanager
 def virtualenv():

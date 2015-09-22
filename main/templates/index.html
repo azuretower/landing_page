@@ -13,6 +13,9 @@
     <!-- About Section -->
     {% include 'about.html' %}
 
+    <!-- Blog Section -->
+    {% include 'blog.html' %}
+    
     <!-- Contact Section -->
     {% include 'contact.html' %}
 
@@ -248,3 +251,9 @@
     </div>
 
 {% endblock content %}
+
+{% block js %}
+    <!-- Contact Form JavaScript -->
+    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'js/contact_me.js' %}"></script>
+{% endblock js %}
