@@ -122,7 +122,7 @@ body {
     z-index: 1000;
     position: fixed;
     top: 100px;
-    right: 44px;
+    right: 43px;
     -webkit-transform: rotate(-90deg);
     -webkit-transform-origin: top right;
     background-color: rgba(0,0,0,0.65);
@@ -150,10 +150,9 @@ body {
 
 @-webkit-keyframes social-out {
     0% {
-        right: 44px;
+        right: 43px;
     }
     100% {
-        /*top: 63px;*/
         right:378px;
     }
 }
@@ -163,8 +162,7 @@ body {
         right: 378px;
     }
     100% {
-        /*top: 63px;*/
-        right:44px;
+        right:43px;
     }
 }
 
@@ -174,6 +172,11 @@ body {
 
 #social-badge ul {
     padding-left: 20px;
+}
+
+#social-badge-button {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 footer {
