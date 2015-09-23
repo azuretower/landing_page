@@ -20,3 +20,20 @@ $('#logged-in-badge').click(function(e){
     };
 
 })
+
+$('#social-badge').click(function(e){
+    e.preventDefault();
+    if($('#social-badge').hasClass('closed')) {
+        $('#social-badge').removeClass('closed')
+        $('#social-badge').addClass('open')
+
+        $('#social-badge').removeClass('social-in')
+        $('#social-badge').addClass('social-out')
+    } else if($('#social-badge').hasClass('open')) {
+        $('#social-badge').removeClass('open')
+        $('#social-badge').addClass('closed')
+
+        $('#social-badge').removeClass('social-out')
+        $('#social-badge').addClass('social-in')
+    }
+})
