@@ -11,6 +11,8 @@ body {
     margin-bottom: 120px;
 }
 
+/*START LOGGED IN BUTTON*/
+
 #logged-in-badge {
     z-index: 1000;
     position: fixed;
@@ -38,10 +40,19 @@ body {
     /*uses dropdown2*/
 }
 
+.grow {
+    -webkit-animation-name: grow;
+    -webkit-animation-duration: 1s;
+    /*animation-delay: 1s;*/
+    -webkit-animation-iteration-count: 1;
+    /*animation-timing-function: linear;*/
+    -webkit-animation-fill-mode: forwards;
+}
+
 .dropdown1 {
     -webkit-animation-name: dropdown1;
-    -webkit-animation-duration: .8s;
-    /*animation-delay: 2s;*/
+    -webkit-animation-duration: .5s;
+    animation-delay: .5s;
     -webkit-animation-iteration-count: 1;
     /*animation-timing-function: linear;*/
     -webkit-animation-fill-mode: forwards;
@@ -49,8 +60,8 @@ body {
 
 .dropdown2 {
     -webkit-animation-name: dropdown2;
-    -webkit-animation-duration: .8s;
-    /*animation-delay: 2s;*/
+    -webkit-animation-duration: .5s;
+    animation-delay: .5s;
     -webkit-animation-iteration-count: 1;
     /*animation-timing-function: linear;*/
     -webkit-animation-fill-mode: forwards;
@@ -58,8 +69,8 @@ body {
 
 .pullup1 {
     -webkit-animation-name: pullup1;
-    -webkit-animation-duration: .8s;
-    /*animation-delay: 2s;*/
+    -webkit-animation-duration: .5s;
+    /*animation-delay: 1s;*/
     -webkit-animation-iteration-count: 1;
     /*animation-timing-function: linear;*/
     -webkit-animation-fill-mode: forwards;
@@ -67,11 +78,26 @@ body {
 
 .pullup2 {
     -webkit-animation-name: pullup2;
-    -webkit-animation-duration: .8s;
-    /*animation-delay: 2s;*/
+    -webkit-animation-duration: .5s;
+    /*animation-delay: 1s;*/
     -webkit-animation-iteration-count: 1;
     /*animation-timing-function: linear;*/
     -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.4);
+    }
+    50% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @-webkit-keyframes dropdown1 {
@@ -117,6 +143,8 @@ body {
         left:3px;
     }
 }
+
+/*START STALKME SECTION*/
 
 #social-badge {
     z-index: 1000;
@@ -177,6 +205,96 @@ body {
 #social-badge-button {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+.rotate1 {
+    -webkit-animation-name: rotate1;
+    -webkit-animation-duration: 1s;
+    animation-delay: .1s;
+    -webkit-animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotate1 {
+    from {
+        transfrom: rotate(90deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.rotate2 {
+    -webkit-animation-name: rotate2;
+    -webkit-animation-duration: 1s;
+    animation-delay: .2s;
+    -webkit-animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotate2 {
+    from {
+        transfrom: rotate(90deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.rotate3 {
+    -webkit-animation-name: rotate3;
+    -webkit-animation-duration: 1s;
+    animation-delay: .3s;
+    -webkit-animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotate3 {
+    from {
+        transfrom: rotate(90deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.rotate4 {
+    -webkit-animation-name: rotate4;
+    -webkit-animation-duration: 1s;
+    animation-delay: .4s;
+    -webkit-animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotate4 {
+    from {
+        transfrom: rotate(90deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.rotate5 {
+    -webkit-animation-name: rotate5;
+    -webkit-animation-duration: 1s;
+    animation-delay: .5s;
+    -webkit-animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotate5 {
+    from {
+        transfrom: rotate(90deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
 }
 
 footer {

@@ -18,6 +18,11 @@ def collect_static():
     with virtualenv():
         run('./manage.py collectstatic --noinput')
 
+def install_requirements():
+    #Install the pip requirements listed in the reqs.txt file.
+    with virtualenv():
+        run('pip install -r reqs.txt')
+
 def pull():
     code_dir = '/sites/projects/landing_page'
     with cd(code_dir):
@@ -29,6 +34,7 @@ def pull():
     
 def deploy():
     pull()
+    install_requirements()
     collect_static()
     sudo('service apache2 restart')
 
