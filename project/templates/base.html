@@ -33,9 +33,19 @@
         {% include 'navbar.html' %}
 
         {% if user.is_authenticated %}
-            <div class="logged-in">
-                <a class="btn btn-primary" href="{% url 'logout' %}">
+            <div id='logged-in-badge' class="closed">
+                <button class="btn btn-primary">
                     Acting As: {{ user.username|title }}
+                </button>
+            </div>
+            <div id="new-post-badge">
+                <a class='btn btn-primary' href='#'>
+                    New Post
+                </a>
+            </div>
+            <div id="logout-badge">
+                <a class='btn btn-primary' href='{% url "logout" %}'>
+                    Logout
                 </a>
             </div>
         {% endif %}
@@ -58,6 +68,7 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="{% static 'js/freelancer.js' %}"></script>
+        <script src="{% static 'js/landing.js' %}"></script>
         {% block js %}
         {% endblock js %}
     </body>

@@ -1,5 +1,5 @@
 {% url 'home' as home %}
-{% url 'blog' as blog %}
+{% url 'front' as blog %}
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -11,12 +11,13 @@
                 <span class="icon-bar"></span>
             </button>
             {% if request.path == home %}
-                <a id='nav-page-top' class="navbar-brand" href="#page-top">
+                <a id='nav-page-top' class="navbar-brand" href="#page-top">&lt;RM&gt; Ryan &lt;/RM&gt;</a>
+            {% elif request.path == blog %}
+                <a id='nav-page-top' class="navbar-brand" href="{% url 'front' %}">&lt;AT&gt; Azure &lt;/AT&gt;</a>
             {% else %}
-                <a id='nav-page-top' class="navbar-brand" href="{% url 'home' %}">
+                <a id='nav-page-top' class="navbar-brand" href="#page-top">&lt;RM&gt; Ryan &lt;/RM&gt;</a>
             {% endif %}
-                &lt;RM&gt; Ryan &lt;/RM&gt;
-            </a>
+            
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

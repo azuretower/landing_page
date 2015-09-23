@@ -11,14 +11,114 @@ body {
     margin-bottom: 120px;
 }
 
-.logged-in {
-    z-index: 1049;
+#logged-in-badge {
+    z-index: 1000;
     position: fixed;
     top: 63px;
     left: 3px;
-    /*width: 50px;*/
-    /*height: 50px;*/
 }
+
+#new-post-badge {
+    z-index: 900;
+    position: fixed;
+    top: 63px;
+    left: 3px;
+    /*needs to be top 110px*/
+    /*needs to be left 51px*/
+    /*uses dropdown1*/
+}
+
+#logout-badge {
+    z-index: 800;
+    position: fixed;
+    top: 63px;
+    left: 3px;
+    /*needs to be top 157px*/
+    /*needs to be left 67px*/
+    /*uses dropdown2*/
+}
+
+.dropdown1 {
+    -webkit-animation-name: dropdown1;
+    -webkit-animation-duration: .8s;
+    /*animation-delay: 2s;*/
+    -webkit-animation-iteration-count: 1;
+    /*animation-timing-function: linear;*/
+    -webkit-animation-fill-mode: forwards;
+}
+
+.dropdown2 {
+    -webkit-animation-name: dropdown2;
+    -webkit-animation-duration: .8s;
+    /*animation-delay: 2s;*/
+    -webkit-animation-iteration-count: 1;
+    /*animation-timing-function: linear;*/
+    -webkit-animation-fill-mode: forwards;
+}
+
+.pullup1 {
+    -webkit-animation-name: pullup1;
+    -webkit-animation-duration: .8s;
+    /*animation-delay: 2s;*/
+    -webkit-animation-iteration-count: 1;
+    /*animation-timing-function: linear;*/
+    -webkit-animation-fill-mode: forwards;
+}
+
+.pullup2 {
+    -webkit-animation-name: pullup2;
+    -webkit-animation-duration: .8s;
+    /*animation-delay: 2s;*/
+    -webkit-animation-iteration-count: 1;
+    /*animation-timing-function: linear;*/
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes dropdown1 {
+    0% {
+        top:63px;
+        left:3px;
+    }
+    100% {
+        top: 110px;
+        left: 51px;
+    }
+}
+
+@-webkit-keyframes dropdown2 {
+    0% {
+        top:63px;
+        left:3px;
+    }
+    100% {
+        top: 157px;
+        left:67px;
+    }
+}
+
+@-webkit-keyframes pullup1 {
+    0% {
+        top:110px;
+        left:51px;
+    }
+    100% {
+        top: 63px;
+        left:3px;
+    }
+}
+
+@-webkit-keyframes pullup2 {
+    0% {
+        top:157px;
+        left:67px;
+    }
+    100% {
+        top: 63px;
+        left:3px;
+    }
+}
+
+
 
 footer {
     /* settings for the position of the footer */
@@ -157,6 +257,11 @@ button#contact_btn:focus {
 
     .hr-divider {
         width: 80%;
+    }
+
+    #bs-example-navbar-collapse-1 {
+        position: relative;
+        z-index: 1050;
     }
 }
 
