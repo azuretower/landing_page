@@ -132,19 +132,19 @@ body {
 
 .social-in {
     -webkit-animation-name: social-in;
-    -webkit-animation-duration: .8s;
+    -webkit-animation-duration: .1s;
     /*animation-delay: 2s;*/
     -webkit-animation-iteration-count: 1;
-    /*animation-timing-function: linear;*/
+    animation-timing-function: ease-out;
     -webkit-animation-fill-mode: forwards;
 }
 
 .social-out {
     -webkit-animation-name: social-out;
-    -webkit-animation-duration: .8s;
+    -webkit-animation-duration: .1s;
     /*animation-delay: 1s;*/
     -webkit-animation-iteration-count: 1;
-    /*animation-timing-function: linear;*/
+    animation-timing-function: ease-in;
     -webkit-animation-fill-mode: forwards;
 }
 
