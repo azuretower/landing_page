@@ -13,6 +13,17 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
+# django-markupfield stuff
+import markdown
+from docutils.core import publish_parts
+def render_rest(markup):
+    parts = publish_parts(source=markup, writer_name='html4css1')
+    return parts['fragment']
+
+MARKUP_FIELD_TYPES = (
+    ('markdown', markdown.markdown),
+)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -65,10 +76,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'project.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 
 # Internationalization

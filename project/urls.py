@@ -21,9 +21,9 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('main.urls')),
+    url(r'^', include('main.urls', namespace='main')),
     url(r'^', include('github_webhooks.urls')),
-    url(r'^blog/', include('blog.urls')),
+    url(r'^blog/', include('blog.urls', namespace='blog')),
 
     url(r'^login/$', 'main.user_auth.login', name='login'),
     url(r'^logout/$', 'main.user_auth.logout', name='logout'),
