@@ -210,23 +210,71 @@ body {
 .rotate1 {
     -webkit-animation-name: rotate1;
     -webkit-animation-duration: 1s;
-    animation-delay: .1s;
+    /*animation-delay: .1s;*/
     -webkit-animation-iteration-count: 1;
     animation-timing-function: ease-in;
     -webkit-animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes rotate1 {
-    from {
+    /*from {
         transfrom: rotate(90deg);
     }
     to {
         transform: rotate(-360deg);
+    }*/
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
 .rotate2 {
     -webkit-animation-name: rotate2;
+    -webkit-animation-duration: 1s;
+    animation-delay: .1s;
+    -webkit-animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotate2 {
+    /*from {
+        transfrom: rotate(90deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }*/
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.rotate3 {
+    -webkit-animation-name: rotate3;
     -webkit-animation-duration: 1s;
     animation-delay: .2s;
     -webkit-animation-iteration-count: 1;
@@ -234,17 +282,32 @@ body {
     -webkit-animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes rotate2 {
-    from {
+@-webkit-keyframes rotate3 {
+    /*from {
         transfrom: rotate(90deg);
     }
     to {
         transform: rotate(-360deg);
+    }*/
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
-.rotate3 {
-    -webkit-animation-name: rotate3;
+.rotate4 {
+    -webkit-animation-name: rotate4;
     -webkit-animation-duration: 1s;
     animation-delay: .3s;
     -webkit-animation-iteration-count: 1;
@@ -252,17 +315,32 @@ body {
     -webkit-animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes rotate3 {
-    from {
+@-webkit-keyframes rotate4 {
+    /*from {
         transfrom: rotate(90deg);
     }
     to {
         transform: rotate(-360deg);
+    }*/
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
-.rotate4 {
-    -webkit-animation-name: rotate4;
+.rotate5 {
+    -webkit-animation-name: rotate5;
     -webkit-animation-duration: 1s;
     animation-delay: .4s;
     -webkit-animation-iteration-count: 1;
@@ -270,30 +348,27 @@ body {
     -webkit-animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes rotate4 {
-    from {
-        transfrom: rotate(90deg);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
-}
-
-.rotate5 {
-    -webkit-animation-name: rotate5;
-    -webkit-animation-duration: 1s;
-    animation-delay: .5s;
-    -webkit-animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    -webkit-animation-fill-mode: forwards;
-}
-
 @-webkit-keyframes rotate5 {
-    from {
+    /*from {
         transfrom: rotate(90deg);
     }
     to {
         transform: rotate(-360deg);
+    }*/
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 

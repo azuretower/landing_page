@@ -25,7 +25,7 @@ $('#logged-in-badge').click(function(e){
 
 })
 
-$('#social-badge').click(function(e){
+$('#social-badge-button').click(function(e){
     e.preventDefault();
     if($('#social-badge').hasClass('closed')) {
         $('#social-badge').removeClass('closed')
