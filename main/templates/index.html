@@ -2,6 +2,10 @@
 
 {% load staticfiles %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock css %}
+
 {% block content %}
 
     <div id='social-badge' class="closed">
@@ -279,10 +283,14 @@
     <!-- Contact Form JavaScript -->
     <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
     <script src="{% static 'js/contact_me.js' %}"></script>
+    <script type="text/javascript" src='{% static "js/blog.js" %}'></script>
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
+    </script>
+    <script>
+        $(document).ready(loadPreviews(page, page_size-1));
     </script>
 });
 {% endblock js %}

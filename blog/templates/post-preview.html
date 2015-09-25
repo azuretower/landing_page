@@ -1,0 +1,17 @@
+{% for post in posts %}
+
+<div class="post-preview">
+    <a href="{% url 'blog:get_post' id=post.id %}">
+        <h3 class="post-title">
+            {{ post.title }}
+        </h3>
+    </a>
+        {{ post.text|truncatewords:'20' }}
+    <h6 class="post-meta">
+        Posted {{ post.date_posted|timesince }} ago
+        {# <a href="{% url 'edit_post' id=post.id %}#disqus_thread"></a> #}
+    </h6>
+</div>
+<hr>
+
+{% endfor %}

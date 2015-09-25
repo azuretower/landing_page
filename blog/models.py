@@ -18,7 +18,7 @@ class Post(models.Model):
 
 class Tag(models.Model):
     name = models.CharField(max_length=255)
-    post = models.ManyToManyField('Post')
+    post = models.ManyToManyField('Post', related_name='tags')
 
     def __unicode__(self):
         return self.name

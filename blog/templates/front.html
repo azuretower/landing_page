@@ -3,29 +3,43 @@
 {% load staticfiles %}
 
 {% block css %}
-    {# <link rel="stylesheet" href="{% static 'css/blog.css' %}"> #}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 {% endblock css %}
 
 {% block content %}
 
-    <div class="container blog-front top-space">
+    <div class="container top-space bottom-space">
         <div class="row">
-            <div class="col-xs-12">
-                <h1>Azure Tower</h1>
-                <h6>On the internet, people have different names.</h6>
-                <h6>Mine is Azure</h6>
+            <div class="blog-title col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                <h1>Azure&nbsp;Tower</h1>
+                <h6>On the internet</h6>
+                <h5>people have different names</h5>
+                <h4>Mine is Azure</h4>
             </div>
         </div>
+
+        <div class="row blog-recent">
+            <div class="col-xs-8">
+                <h2>Recent Posts</h2>
+            </div>
+            <div class="col-sm-4 hidden-xs">
+                <h2>Archives</h2>
+            </div>
+        </div>
+
         <div class="row">
-            <div class="col-xs-12">
-                <style>
-                    h2 {
-                        text-align: center;
-                        padding-top: 50px;
-                    }
-                </style>
-                <h2>This Area is Under Construction</h2>
-                <h2>Please Come Back Later</h2>
+            <div class="col-sm-7 col-sm-offset-1 col-xs-11 col-xs-offset-1">
+                <div id='post-previews'></div>
+            
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a id='older-posts' href="">Older Posts &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4 hidden-xs">
+                
             </div>
         </div>
     </div>
@@ -33,4 +47,8 @@
 {% endblock content %}
 
 {% block js %}
+    <script type="text/javascript" src='{% static "js/blog.js" %}'></script>
+    <script>
+        $(document).ready(loadPreviews(page, page_size))
+    </script>
 {% endblock js %}

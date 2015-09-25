@@ -1,3 +1,61 @@
-.blog-front {
-    margin-top: 80px;
+.blog-title {
+    border-top: 5px solid #2c3e50;
+    border-bottom: 5px solid #2c3e50
+}
+
+.blog-title h5 {
+    text-align: center;
+}
+
+.blog-title h4 {
+    text-align: right;
+}
+
+.blog-recent {
+    padding-top: 50px;
+}
+
+.blog-comments {
+    margin-top: 50px;
+}
+
+.blog-comments .col-md-10 {
+    border-top: 5px solid #2c3e50;
+}
+
+.blog-body p {
+    font-size: 16px;
+}
+
+.blog-body pre code {
+    font-size: 12px;
+}
+
+.blog-body {
+    padding-top: 3.5em;
+}
+
+.post-title {
+    display: inline;
+}
+
+/*This Fights Bootstrap so the code blocks scroll Horizontal*/
+pre {
+    overflow-x: auto;
+    max-width: 600px;
+    margin: auto;
+}
+pre code {
+    overflow-wrap: normal;
+    white-space: pre;
+}
+
+.pager li>a:focus,
+.pager li>span:focus {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #18bc9c;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: #fff;
 }

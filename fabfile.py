@@ -23,6 +23,10 @@ def install_requirements():
     with virtualenv():
         run('pip install -r reqs.txt')
 
+def migrate():
+    with virtualenv():
+        run('./manage.py migrate')
+
 def pull():
     code_dir = '/sites/projects/landing_page'
     with cd(code_dir):

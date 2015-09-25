@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock css %}
+
+{% block content %}
+    
+<title>{{ post.title }}</title>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <div class="container top-space">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{ post.title }}</h1>
+                    <p>Tags: 
+                        {% for tag  in tags %}
+                            {{ tag }}
+                            {% if not forloop.last %},{% endif %}
+                        {% endfor %}
+                    </p>
+                    <span class="meta">Posted {{ post.date_posted|timesince }} ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Content -->
+    <article class='blog-body'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                    {{ post.text }}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div class="container blog-comments bottom-space">
+        <div class="row">
+            <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES * * */
+                    var disqus_shortname = 'azuretower';
+                    
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock content %}

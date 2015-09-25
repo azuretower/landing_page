@@ -11,6 +11,10 @@ body {
     margin-bottom: 120px;
 }
 
+#post-previews {
+    text-align: left;
+}
+
 /*START LOGGED IN BUTTON*/
 
 #logged-in-badge {

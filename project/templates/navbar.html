@@ -12,10 +12,8 @@
             </button>
             {% if request.path == home %}
                 <a id='nav-page-top' class="navbar-brand" href="#page-top">&lt;RM&gt; Ryan &lt;/RM&gt;</a>
-            {% elif request.path == blog %}
-                <a id='nav-page-top' class="navbar-brand" href="{% url 'blog:front' %}">&lt;AT&gt; Azure &lt;/AT&gt;</a>
             {% else %}
-                <a id='nav-page-top' class="navbar-brand" href="#page-top">&lt;RM&gt; Ryan &lt;/RM&gt;</a>
+                <a id='nav-page-top' class="navbar-brand" href="{% url 'blog:front' %}">&lt;AT&gt; Azure &lt;/AT&gt;</a>
             {% endif %}
             
         </div>

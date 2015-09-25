@@ -18,4 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^$', 'blog.views.front', name='front'),
+    url(r'^post-previews/$', 'blog.views.post_previews', name='post-previews'),
+    url(r'^post/(?P<id>[0-9]+)/$', 'blog.views.get_post', name='get_post'),
 ]
